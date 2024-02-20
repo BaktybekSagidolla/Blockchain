@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voting dApp</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script src="https://cdn.ethers.io/lib/ethers-5.2.umd.min.js" type="application/javascript"></script>
+</head>
+<body style="background-color: #f0f0f5;">
+<div id="connectMetamask" style="text-align: center; padding: 20px;">
+    <p id="connectWalletMessage">Please connect your Metamask Wallet to Vote</p>
+    <button id="connectWallet" style="font-size: 20px;"><i class="fas fa-wallet"></i> Connect Wallet</button>
+</div>
+<div style="display: flex; flex-direction: column; justify-content: space-around; align-items: center; gap: 20px; padding: 20px; background-color: #f0f0f8; border-radius: 5px;">
+
+    <div style="display: flex; justify-content: space-around; align-items: start; gap: 20px; width: 100%;">
+        <div id="votingStation" style="flex: 1; background-color: #e1e1e6; padding: 20px; border-radius: 5px;">
+            <div id="timer">
+                <p id="timerMessage">Voting ends in <span id="time">123</span> seconds <i class="fas fa-hourglass-half"></i></p>
+            </div>
+            <div id="mainBoard">
+                <h2 style="text-align: center;">Candidates</h2>
+                <table id="candidateBoard" style="width: 100%;">
+                    <tr>
+                        <th>ID No.</th>
+                        <th>Candidate</th>
+                    </tr>
+                    <tr>
+                        <td>0</td>
+                        <td>Candidate 0</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>Candidate 1</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Candidate 2</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <div id="voteForm" style="flex: 1; margin-top: 0;">
+            <p>Please select the ID of the candidate you would like to vote for:</p>
+            <label>
+                <input type="number" id="vote" />
+                <button id="sendVote"><i class="fas fa-paper-plane"></i> Send Vote</button>
+            </label>
+        </div>
+
+        <div id="showresultContainer" style="text-align: center; margin-top: 20px;">
+            <button id="showResult"><i class="fas fa-chart-bar"></i> Show Result</button>
+        </div>
+    </div>
+
+    <div id="result" style="margin-top: 50px;">
+        <h2>Vote Results</h2>
+        <table id="resultBoard" style="width: 200%;">
+            <tr>
+                <th>ID No.</th>
+                <th>Candidate</th>
+                <th>Number of Votes</th>
+            </tr>
+            <tr>
+                <td>0</td>
+                <td>Candidate 0</td>
+                <td>vote count</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Candidate 1</td>
+                <td>vote count</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Candidate 2</td>
+                <td>vote count</td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<div id="admin" style="background-color: #dcdcdc; padding: 20px; margin-top: 20px; border-radius: 5px;">
+    <h2 id="adminHeading" style="text-align: center;">Admin Panel</h2>
+    <div id="tools">
+        <div id="startElection">
+            <p id="startElectionMessage">Start Election</p>
+            <input type="text" id="candidates" placeholder="names separated by comma (,)" />
+            <input type="number" id="electionDuration" placeholder="duration in minutes" />
+            <button id="startAnElection"><i class="fas fa-play"></i> Start Election</button>
+        </div>
+        <div id="addCandidate" style="margin-top: 20px;">
+            <p id="addCandidateMessage">Add a Candidate</p>
+            <input type="text" id="candidate" placeholder="candidate name" />
+            <button id="addTheCandidate"><i class="fas fa-user-plus"></i> Add Candidate</button>
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
