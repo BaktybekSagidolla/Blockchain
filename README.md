@@ -30,6 +30,7 @@ Make sure you have the following software installed on your machine:
    ```bash
    npm install
    npm install express
+   npm install express-session
 
 
 ### Configuration
