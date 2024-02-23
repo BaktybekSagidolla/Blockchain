@@ -69,4 +69,5 @@ Contact us
 221222@astanait.edu.kz(Zharylkasyn Yersultan)
 221311@astanait.edu.kz(Sagidolla Baktybek)
 221541@astana.edu.kz(Abilov Zhasulan)
+221028@astanait.edu.kz(Serikkaliev Duman)
 
